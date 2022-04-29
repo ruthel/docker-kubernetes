@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: apps
+spec:
+  template:
+    metadata:
+      name: apps-pod
+    spec:
+      containers:
+      - name: apps
+        image: admin/apps
+        imagePullPolicy: Never
+      restartPolicy: Never
